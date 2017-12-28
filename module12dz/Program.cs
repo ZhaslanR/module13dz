@@ -17,6 +17,7 @@ namespace module12dz
             const int minValue = 1;
             const int maxValue = 25;
             Random rand = new Random();
+            int sum = 0;
 
             for(int i = 0;i<sizeNumbers;i++)
             {
@@ -38,10 +39,16 @@ namespace module12dz
                     secondMax = max;
                     max = num;
                 }
+                if(num%2 == 0)
+                {
+                    sum += num;
+                }
             }
+
 
             Console.WriteLine("Максимальное число : {0}", numbers.Max());
             Console.WriteLine("Второе после максимального число : {0}", secondMax);
+            Console.WriteLine("Сумма всех четных элементов: {0}", sum);
 
             Console.ReadLine();
         }
